@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Layout from './Components/Layout/Layout'
 import Register from './Components/Register/Register'
@@ -25,7 +25,7 @@ import CashOrder from './Components/CashOrder/CashOrder'
 
 
 
-const Routers = createBrowserRouter([
+const Routers = createHashRouter([
   {
     path: "/", element: <Layout />, children: [
       { path: "register", element: <Register /> },
