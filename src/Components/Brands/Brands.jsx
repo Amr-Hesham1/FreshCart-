@@ -39,7 +39,7 @@ export default function Brands() {
                         <g className={style.cart__lines} stroke="currentColor">
                             <polyline className={style.cart__top} points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" strokeDasharray="338 338" strokeDashoffset={-338} />
                             <g className={style.cart__wheel1} transform="rotate(-90,43,111)">
-                                <circle class={style.cart__wheel} cx={43} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
+                                <circle className={style.cart__wheel} cx={43} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
                             </g>
                             <g className={style.cart__wheel2} transform="rotate(90,102,111)">
                                 <circle className={style.cart__wheel} cx={102} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
@@ -61,17 +61,17 @@ export default function Brands() {
 
             }
 
-{
-                SubBrand&&<div onClick={()=>setSubBrand(null)} className='flex justify-center items-center  w-screen h-screen fixed inset-0 backdrop-blur-sm  z-10 '>
-                <div onClick={(e)=> e.stopPropagation()} className="flex flex-col max-w-xs items-center bg-gray-100 rounded-3xl shadow-2xl md:flex-row md:max-w-xl ">
-                    <img className="object-cover w-full rounded-3xl" src={SubBrand.image} alt />
-                    <div className="flex flex-col justify-between p-4 leading-normal">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight">{SubBrand.name}</h5>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            {
+                SubBrand && <div onClick={() => setSubBrand(null)} className='flex justify-center items-center  w-screen h-screen fixed inset-0 backdrop-blur-sm  z-10 '>
+                    <div onClick={(e) => e.stopPropagation()} className="flex flex-col max-w-xs items-center bg-gray-100 rounded-3xl shadow-2xl md:flex-row md:max-w-xl ">
+                        <img className="object-cover w-full rounded-3xl" src={SubBrand.image} alt />
+                        <div className="flex flex-col justify-between p-4 leading-normal">
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight">{SubBrand.name}</h5>
+                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-}
+            }
 
 
 

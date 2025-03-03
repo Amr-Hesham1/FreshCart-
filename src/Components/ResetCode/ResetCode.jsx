@@ -68,7 +68,7 @@ export default function ResetCode() {
                 <div className='my-10 m-auto lg:gap-10 grid md:grid-cols-5'>
                     <img src={code} className='md:col-span-2 w-full ' alt="ResetCode" />
                     <form onSubmit={Formik.handleSubmit} className=" w-4/5 m-auto md:col-span-3">
-                        <h1 className='text-center font-extrabold text-5xl text-sky-700 italic font-serif py-9 lg:py-16'>ResetCode   <i class="fa-solid fa-key"></i></h1>
+                        <h1 className='text-center font-extrabold text-5xl text-sky-700 italic font-serif py-9 lg:py-16'>ResetCode   <i className="fa-solid fa-key"></i></h1>
                         {<Alert className='col-span-2 md:mx-6 my-6' color="success" description="Your action has been completed successfully. We'll notify you when updates are available." isVisible={isVisible} title="Success Notification" variant="faded" onClose={() => setIsVisible(false)} />}
                         {ApiError && <Alert className='col-span-2 md:mx-6 my-6' color="danger" description="Your action hasn't been completed successfully. We'll notify you when updates are available." isInVisible={isInVisible} title={ApiError} variant="faded" onClose={() => setIsInVisible(false)} />}
                         <div className='flex flex-col items-center justify-center w-full'>
@@ -87,7 +87,7 @@ export default function ResetCode() {
 {/* <div className='w-11/12 my-10 m-auto gap-10 grid grid-cols-2'>
 <img src={code} className='col-span-1' alt="Login" />
 <form onSubmit={Formik.handleSubmit} className=" w-4/5 m-auto col-span-1">
-    <h1 className='text-center font-extrabold text-5xl text-sky-700 italic font-serif pb-16'>ResetCode   <i class="fa-solid fa-key"></i></h1>
+    <h1 className='text-center font-extrabold text-5xl text-sky-700 italic font-serif pb-16'>ResetCode   <i className="fa-solid fa-key"></i></h1>
     {<Alert className='col-span-2 mx-6 my-8' color="success" description="Your action has been completed successfully. We'll notify you when updates are available." isVisible={isVisible} title="Success Notification" variant="faded" onClose={() => setIsVisible(false)} />}
     {ApiError && <Alert className='col-span-2 mx-6 my-8' color="danger" description="Your action hasn't been completed successfully. We'll notify you when updates are available." isInVisible={isInVisible} title={ApiError} variant="faded" onClose={() => setIsInVisible(false)} />}
 

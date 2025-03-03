@@ -170,10 +170,10 @@ export default function Cart() {
                                 <g className={style.cart__lines} stroke="currentColor">
                                     <polyline className={style.cart__top} points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" strokeDasharray="338 338" strokeDashoffset={-338} />
                                     <g className={style.cart__wheel1} transform="rotate(-90,43,111)">
-                                        <circle class={style.cart__wheel} cx={43} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
+                                        <circle className={style.cart__wheel} cx={43} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
                                     </g>
                                     <g className={style.cart__wheel2} transform="rotate(90,102,111)">
-                                        <circle class={style.cart__wheel} cx={102} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
+                                        <circle className={style.cart__wheel} cx={102} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
                                     </g>
                                 </g>
                             </g>

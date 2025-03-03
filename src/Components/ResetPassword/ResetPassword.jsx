@@ -95,7 +95,7 @@ export default function ResetPassword() {
 
                 <img src={reset} className='md:col-span-2 w-full' alt="ResetPassword" />
                 <form onSubmit={Formik.handleSubmit} className="w-4/5 m-auto md:col-span-3">
-                    <h1 className='text-center font-extrabold text-5xl text-sky-700 italic font-serif pb-16'>Reset Password   <i class="fa-solid fa-unlock"></i></h1>
+                    <h1 className='text-center font-extrabold text-5xl text-sky-700 italic font-serif pb-16'>Reset Password   <i className="fa-solid fa-unlock"></i></h1>
                     {<Alert className='col-span-2 md:mx-6 my-6' color="success" description="Your action has been completed successfully. We'll notify you when updates are available." isVisible={isVisible} title="Success Notification" variant="faded" onClose={() => setIsVisible(false)} />}
                     {ApiError && <Alert className='col-span-2 md:mx-6 my-6' color="danger" description="Your action hasn't been completed successfully. We'll notify you when updates are available." isInVisible={isInVisible} title={ApiError} variant="faded" onClose={() => setIsInVisible(false)} />}
                     <Input value={Formik.values.email} onChange={Formik.handleChange} onBlur={Formik.handleBlur} className='col-span-2 md:mx-6 my-6 ' name='email' label="Email" type="email" endContent={<MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />} />

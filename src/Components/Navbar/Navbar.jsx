@@ -21,39 +21,39 @@ export default function Navbar() {
                             <h1><i className="transition-all text-sky-600 group-hover:text-sky-500 px-1 fa-solid fa-cart-shopping" />Fresh Cart</h1>
                         </Link>
                     </div>
-<div className='lg:hidden'>
-{UserToken ? <div className="flex lg:hidden">
-                        <button onClick={() => setIsOpen(true)} type="button" className="-m-2.5 inline-flex items-center justify-center text-gray-500 hover:text-sky-600 rounded-md p-2.5 ">
-                            <span className="sr-only">Open main menu</span>
-                            <svg className="size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.8" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg>
-                        </button>
-                    </div> :
+                    <div className='lg:hidden'>
+                        {UserToken ? <div className="flex lg:hidden">
+                            <button onClick={() => setIsOpen(true)} type="button" className="-m-2.5 inline-flex items-center justify-center text-gray-500 hover:text-sky-600 rounded-md p-2.5 ">
+                                <span className="sr-only">Open main menu</span>
+                                <svg className="size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.8" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                            </button>
+                        </div> :
 
-                        <>
-                            {Location.pathname.includes('/login') ?
-                                <Link to={'/register'}>
-                                    <button className=" group text-center w-28 rounded-3xl h-9 relative text-black text-xl font-semibold group" type="button">
-                                        <div className="group-hover:bg-green-400 rounded-3xl h-9 w-9 flex items-center justify-center absolute left-0 top-0 group-hover:w-[103px] z-10 duration-500">
-                                            <i className=" text-base text-green-400 group-hover:text-white fa-solid fa-address-card" />
-                                        </div>
-                                        <p className="translate-x-2 -translate-y-0.5 text-base">Register</p>
-                                    </button>
-                                </Link> :
-                                <Link to={'/login'}>
-                                    <button className=" group text-center w-28 rounded-3xl h-9 relative text-black text-xl font-semibold group" type="button">
-                                        <div className="group-hover:bg-green-400 rounded-3xl h-9 w-9 flex items-center justify-center absolute left-0 top-0 group-hover:w-[103px] z-10 duration-500">
-                                            {/* <i className=" text-lg text-white fa-solid fa-address-card" /> */}
-                                            <i className=" text-base text-green-400 group-hover:text-white fa-solid fa-right-to-bracket" />
-                                        </div>
-                                        <p className="translate-x-1 -translate-y-0.5 text-base">Login</p>
-                                    </button>
-                                </Link>
-                            }
-                        </>
-                    }
-</div>
+                            <>
+                                {Location.pathname.includes('/login') ?
+                                    <Link to={'/register'}>
+                                        <button className=" group text-center w-28 rounded-3xl h-9 relative text-black text-xl font-semibold group" type="button">
+                                            <div className="group-hover:bg-green-400 rounded-3xl h-9 w-9 flex items-center justify-center absolute left-0 top-0 group-hover:w-[103px] z-10 duration-500">
+                                                <i className=" text-base text-green-400 group-hover:text-white fa-solid fa-address-card" />
+                                            </div>
+                                            <p className="translate-x-2 -translate-y-0.5 text-base">Register</p>
+                                        </button>
+                                    </Link> :
+                                    <Link to={'/login'}>
+                                        <button className=" group text-center w-28 rounded-3xl h-9 relative text-black text-xl font-semibold group" type="button">
+                                            <div className="group-hover:bg-green-400 rounded-3xl h-9 w-9 flex items-center justify-center absolute left-0 top-0 group-hover:w-[103px] z-10 duration-500">
+                                                {/* <i className=" text-lg text-white fa-solid fa-address-card" /> */}
+                                                <i className=" text-base text-green-400 group-hover:text-white fa-solid fa-right-to-bracket" />
+                                            </div>
+                                            <p className="translate-x-1 -translate-y-0.5 text-base">Login</p>
+                                        </button>
+                                    </Link>
+                                }
+                            </>
+                        }
+                    </div>
 
                     {
                         UserToken &&
@@ -183,7 +183,7 @@ export default function Navbar() {
                                                     <Link to={'/login'} >
                                                         <button className=" group text-center w-28 rounded-3xl h-9 relative text-black text-xl font-semibold group" type="button">
                                                             <div className="group-hover:bg-green-400 rounded-3xl h-9 w-9 flex items-center justify-center absolute left-0 top-0 group-hover:w-[103px] z-10 duration-500">
-                                                                <i class="text-base text-green-400 group-hover:text-white fa-solid fa-right-from-bracket"></i>
+                                                                <i className="text-base text-green-400 group-hover:text-white fa-solid fa-right-from-bracket"></i>
                                                             </div>
                                                             <p className="translate-x-1 -translate-y-0.5 text-base">Login</p>
                                                         </button>

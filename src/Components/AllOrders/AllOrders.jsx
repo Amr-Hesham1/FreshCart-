@@ -36,10 +36,10 @@ export default function AllOrders() {
                             <g className={style.cart__lines} stroke="currentColor">
                                 <polyline className={style.cart__top} points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" strokeDasharray="338 338" strokeDashoffset={-338} />
                                 <g className={style.cart__wheel1} transform="rotate(-90,43,111)">
-                                    <circle class={style.cart__wheel} cx={43} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
+                                    <circle className={style.cart__wheel} cx={43} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
                                 </g>
                                 <g className={style.cart__wheel2} transform="rotate(90,102,111)">
-                                    <circle class={style.cart__wheel} cx={102} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
+                                    <circle className={style.cart__wheel} cx={102} cy={111} r={13} strokeDasharray="81.68 81.68" strokeDashoffset="81.68" />
                                 </g>
                             </g>
                         </g>
@@ -53,7 +53,7 @@ export default function AllOrders() {
                                         <div className='m-2 rounded-3xl hover:shadow-sky-600 hover:shadow-lg    shadow-2xl bg-gray-200'>
                                             <div className='flex justify-between py-2 px-4  rounded-t-3xl bg-sky-600 border-solid border-gray-600 border-b-2 text-white'>
                                                 <p className=' font-semibold'>Order ID : <span className='text-gray-700 font-bold' > {order.id}</span></p>
-                                                <p className='font-semibold'>{order.paidAt?.substring(0,10)}</p>
+                                                <p className='font-semibold'>{order.paidAt?.substring(0, 10)}</p>
                                             </div>
                                             <div className='px-2 p-4'>
                                                 <p className=' font-bold'>Order Price : <span className='font-semibold text-red-600'>{order.totalOrderPrice} EGP</span></p>
