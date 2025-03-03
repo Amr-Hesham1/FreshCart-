@@ -1,0 +1,139 @@
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .5s;
+
+
+}
+
+/* plus sign */
+.sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign #svg1 {
+    width: 15px;
+}
+
+.sign #svg1 #path1 {
+    fill: rgb(255, 65, 65);
+    transition: all 0.3s;
+}
+
+/* text */
+.text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+
+/* hover effect on button width */
+.Btn:hover {
+    width: 100px;
+    border-radius: 40px;
+    transition-duration: .3s;
+    background-color: rgb(255, 65, 65);
+
+    .sign #svg1 #path1 {
+        fill: white;
+    }
+}
+
+.Btn:hover .sign {
+    width: 40%;
+    transition-duration: .3s;
+    padding-left: 10px;
+}
+
+/* hover effect button's text */
+.Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 5px;
+
+}
+
+/* button click effect*/
+.Btn:active {
+    transform: translate(2px, 2px);
+}
+
+
+
+
+.btn_cart {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 0px;
+    width: 20px;
+    height: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.btn_cart::after {
+    content: attr(data-quantity);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    padding-top: 5px;
+    font-weight: 700;
+    font-size: 10px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear;
+    top: 115%;
+}
+
+.icon_cart {
+    width: 24.38px;
+    height: 30.52px;
+    transition: .2s linear;
+}
+
+.icon_cart path {
+    fill: rgba(3 105 161);
+    transition: .2s linear;
+}
+
+.btn_cart:hover>.icon_cart {
+    transform: scale(1.2);
+}
+
+.btn_cart:hover>.icon_cart path {
+    fill: rgb(2 132 199);
+}
+
+.btn_cart:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: 105%;
+}
+
+.quantity {
+    display: none;
+}
